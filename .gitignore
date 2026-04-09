@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+/.vscode
+/dist
+/dist-ssr
+/*.local
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Firebase
+.firebase
+firebase-debug.log
+firestore-debug.log
+
+# Build
+/build

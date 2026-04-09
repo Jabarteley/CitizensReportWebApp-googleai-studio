@@ -1,0 +1,26 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Reports media uploads
+    match /reports/{userId}/{fileName} {
+      // Anyone can read uploaded files
+      allow read: if true;
+      
+      // Only authenticated users can upload
+      allow write: if isAuthenticated() && 
+                      request.auth.uid == userId &&
+                      request.resource.size < 10 * 1024 * 1024 && // 10MB limit
+                      (request.resource.contentType.matches('image/.*') || 
+                       request.resource.contentType.matches('video/.*'));
+      
+      // Only owners or admins can delete
+      allow delete: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+    }
+  }
+}
