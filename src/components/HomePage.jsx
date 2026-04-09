@@ -36,10 +36,10 @@ function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
-                to="/report"
+                to="/login"
                 className="bg-tertiary-container text-on-tertiary-container px-8 py-5 rounded-lg flex items-center justify-center gap-3 font-black uppercase tracking-widest hover:bg-on-tertiary-container hover:text-white transition-all group active:scale-95 shadow-2xl shadow-tertiary/40"
               >
-                Report Crisis Now
+                Admin Login
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">emergency</span>
               </Link>
               <Link
