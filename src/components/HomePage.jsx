@@ -36,7 +36,7 @@ function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
-                to="/login"
+                to="/report"
                 className="bg-tertiary-container text-on-tertiary-container px-8 py-5 rounded-lg flex items-center justify-center gap-3 font-black uppercase tracking-widest hover:bg-on-tertiary-container hover:text-white transition-all group active:scale-95 shadow-2xl shadow-tertiary/40"
               >
                 Report Crisis Now
@@ -46,7 +46,7 @@ function HomePage() {
                 to="/report"
                 className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-5 rounded-lg font-black uppercase tracking-widest hover:bg-white/20 transition-all active:scale-95"
               >
-                Report Crises
+                Report Crisis
               </Link>
             </div>
           </div>
